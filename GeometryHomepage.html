@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="mustache.js"></script>
+        <title>Coach Zumsteg's Website</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+
+    body {
+                background: rgb(51,51,51);
+                font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+                color: white;
+            }
+
+            #background1{
+                background-color: rgb(51,51,51);
+            }
+
+            #background2{
+                background-color: rgba(117, 140, 150, 0.87);
+            }
+
+            #background3{
+                background-color: rgb(193,206,215)
+            }
+    
+            h1 {
+                font: Arial;
+                font-size: 72px;
+                text-transform: uppercase;
+            }
+    
+            h2 {
+                font: Arial;
+                font-size: 36px;
+                text-transform: uppercase;
+            }
+    
+            h3 {
+                font: Arial;
+                font-size: 24px;
+                text-transform: uppercase;
+            }
+            
+            h4 {
+                font: Arial;
+                font-size: 18px;
+                text-transform: uppercase;
+            }
+
+            button {
+                background-color: rgb(193,206,215);
+                border-radius: 0px;
+                padding: 10px;
+                font: Arial;
+                color: rgb(77, 77, 87);
+            }
+    
+            .inputLabel {
+                font-size: 14px;
+                font-weight: bold;
+            }
+    
+            input.inputField {
+                padding: 5px;
+                border: 1px solid rgb(38, 134, 126);
+            }
+    
+            div.box {
+                height: 100px;
+                width: 100px;
+                display: inline-block;
+                margin: 0 10px 0 10px;
+            }
+    
+            .warning {
+                background-color: yellow;
+                font-weight: bold;
+                color: black;
+                padding: 10px;
+                border-radius: 5px;
+            }
+    
+            .danger {
+                background-color: red;
+                font-weight: bold;
+                color: white;
+                padding: 10px;
+                border-radius: 5px;
+            }
+    
+            .success {
+                background-color: rgb(15, 172, 54);
+                font-weight: bold;
+                color: white;
+                padding: 10px;
+                border-radius: 5px;
+            }
+    
+            svg.svg-inline--fa {
+                color: white;
+            }
+    
+            .spacer {
+                margin-top: 25px;
+                margin-left: 25px;
+                margin-right: 25px;
+            }
+    
+            #footer {
+                border-top: 1px solid #dddddd;
+                margin-top: 50px;
+                padding: 10px;
+                text-align: center;
+            }
+
+            ul {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    overflow: hidden;
+                    background-color: white;
+                }
+                
+                li {
+                    float: left;
+                }
+                
+                li a {
+                    display: block;
+                    color: rgb(38, 134, 126));
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                }
+                
+                li a:hover {
+                    background-color: rgb(38, 134, 126);
+                }
+
+                img.round{
+                    border-radius: 50%;
+                    width: 300px;
+                    height: 300px;
+                }
+
+                img.round2{
+                    border-radius: 50%;
+                    width: 500px;
+                    height: 500px;
+                    margin-top:60px;
+                    margin-bottom: 60px;
+                }
+
+                .spacer2{
+                margin-top:25px;
+                margin-bottom: 25px;
+                }
+
+                .spacer3{
+                margin-top:120px;
+                margin-bottom:120px;
+                }
+
+                .spacer4{
+                    margin-bottom:120px;
+                }
+
+                * {
+                    box-sizing: border-box;
+                }
+
+                /* Style inputs */
+                input[type=text], select, textarea {
+                    width: 100%;
+                    padding: 12px;
+                    border: 1px solid rgb(193,206,215);
+                    margin-top: 6px;
+                    margin-bottom: 16px;
+                    resize: vertical;
+                }
+
+                input[type=submit] {
+                    background-color: rgb(38, 134, 126);
+                    color: black
+                    padding: 12px 20px;
+                    border: none;
+                    cursor: pointer;
+                }
+
+                input[type=submit]:hover {
+                    background-color: #45a049;
+                }
+
+                /* Style the container/contact section */
+                .container {
+                    border-radius: 5px;
+                    padding: 10px;
+                }
+
+                /* Create two columns that float next to eachother */
+                .column {
+                    float: left;
+                    width: 50%;
+                    margin-top: 6px;
+                    padding: 20px;
+                }
+
+                /* Clear floats after the columns */
+                .row:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+
+                /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+                @media screen and (max-width: 600px) {
+                .column, input[type=submit] {
+                    width: 100%;
+                    margin-top: 0;
+                }
+                }
+</style>
+</head>
+
+<body>
+    
+   
+    <div class="container">
+        <h3 align="left" background-color=rgb(117,140,163)><a href="homepage.html"><font color=white>Learning with Coach Zumsteg</font></a></h3>
+        <p align="right">tim.zumsteg@washington.k12.mo.us (636) 231-2200</p>
+            <ul class="spacer4">
+                <li><a href="homepage.html"><font color=rgb(51,51,51)>Home</font></a></li>
+                <li><a href="DiscreteHomepage.html"><font color=rgb(51,51,51)>Discrete Mathematics</font></a></li>
+                <li><a href="GeometryHomepage.html"><font color=rgb(51,51,51)>Geometry</font></a></li>
+                <li><a href="PreAlgebraHomepage.html"><font color=rgb(51,51,51)>Pre-Algebra</font></a></li>
+                <li><a href="https://www.gatewayathletic.org/public/genie/766/school/15/"><font color=rgb(51,51,51)>Athletics</font></a></li>
+                <li><a href="contact.html"><font color=rgb(51,51,51)>Contact Coach Zumsteg</font></a></li>
+            </ul>  
+                       
+        <div class="row">
+            <div align="center" class="col-sm-6 col-md-6 col-lg-6">
+                <img padding = "30px" src="geopic.png" role = "image" alt="photo of zumsteg" class="round2">
+            </div>
+            
+            <div align="center" font= arial font-size= 18px class="col-sm-6 col-md-6 col-lg-6" background-color=rgb(117,140,163) class="spacer3">
+                <h1 class="spacer3">Geometry</h1>
+                <p align="left" class="spacer3">
+                    This course is generally taken by Freshmen or Sophomores. It is a course students take after they have passed Algebra 1.
+                    This course is a study of plane Euclidean geometry including proofs. The student will use deductive reasoning and logic to draw 
+                    conclusions when given certain facts. A study of geometric shapes and figures, congruence and similarity, area, volume, constructions, 
+                    plane and three-dimensional figures and their theorems, postulates and definitions are included.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div align="left" font= arial font-size= 18px class="col-sm-2 col-md-3 col-lg-4" background-color=rgb(117,140,163) class="spacer3">
+                <h2 class="spacer3">COURSE MATERIALS</h2>
+                <p align="left" class="spacer3">
+                        You can access the online book for this class with the link below this text. For students currently enrolled in Geometry, 
+                        you can use the following information to log in:
+                        
+                </p>
+                <p class = "spacer2">  ​
+                    username: Student User ID
+                </p>
+                <p>
+                    password: jays2018
+                </p>
+                
+                <button onclick="location.href='https://clever.com/oauth/sis/login?target=NTViNjQ0MmZjZWYyZDMwMTAwMDAwOWMx%3BNGM2M2MxY2Y2MjNkY2U4MmNhYWM%3D%3BaHR0cHM6Ly9jbGV2ZXIuY29tL2luL2F1dGhfY2FsbGJhY2s%3D%3BMTYwMjQ1N2E2ZDU3Mzc4ZjUzM2YwZTJiNGE0Y2JjNjEyOTBiYTQzOGMxM2FiZmZlNTcyOTVmNzI3YmZkNmQ5Mw%3D%3D%3BY29kZQ%3D%3D&skip=1&default_badge='" type="button" align="center" class="spacer2">
+                        Access Online Book Here
+                </button>
+                    
+                
+            </div>
+            <div align="center" class="col-sm-10 col-md-9 col-lg-8">
+                <img src="geometryRough.png" role = "image" alt="photo of zumsteg" width="400" height="500" class="spacer3">
+            </div>
+        </div>
+
+        <div class="row">
+            <div align="left" font= arial font-size= 18px class="col-sm-2 col-md-3 col-lg-4" background-color=rgb(117,140,163) class="spacer3">
+                <h2 class="spacer3">Notes and Homework</h2>
+                <p align="left" class="spacer3">
+                        Notes and homework can be found on Schoology. Click the link below to visit the Schoology page for this course.    
+                </p>
+                <p font-size= 22px class = "spacer2">  ​
+                    Current Schoology code: 3XGR4-9Z7RF
+                </p>
+                                    
+                <button onclick="location.href='https://sdow.schoology.com/login/ldap?&school=119417175'" type="button" align="center" class="spacer2">
+                        Access Schoology Here
+                </button>
+            </div>
+            <div align="center" class="col-sm-10 col-md-9 col-lg-8">
+                <img src="schoology.gif" role = "image" alt="photo of zumsteg" width="600" height="400" class="spacer3">
+            </div>
+        </div>               
+        
+        <div class="row">
+            <div align="center" class="col-sm-6 col-md-6 col-lg-6">
+                <h2 class="spacer3">Contact Coach Zumsteg</h2>
+                <p align="left">600 Blue Jay Dr.</p>
+                <p align="left">Washington, MO 63090</p>
+                <p align="left" class="spacer2">Room 2326</p>
+                <p align="left" class="spacer2">636-231-2200</p>
+                <p align="left" class="spacer2">tim.zumsteg@washington.k12.mo.us</p>
+            </div>
+            <div class="column">
+                <form href="mailto:tim.zumsteg@washington.k12.mo.us" class="spacer3"> 
+                    <label for="fname">First and Last Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <label for="lname">E-Mail Address</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    <label for="subject">Body</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>

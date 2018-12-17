@@ -1,0 +1,82 @@
+@background-color: rgb(77, 77, 87);
+@primary-color: rgb(38, 134, 126);
+@secondary-color: rgba(97, 223, 212, 0.788);
+@text-color: white;
+@border-radius: 10px;
+
+
+.round-borders{
+    border-radius:@border-radius + 5;
+
+}
+
+.button-creator(@primary-color){
+    background: @primary-color;
+    box-shadow: 0px 3px 0px darken(@primary-color, 7%);
+
+    &:active{
+        box-shadow: 0px 3px 0px darken(@primary-color, 7%);
+        position: relative;
+        top: 2px
+    }
+}
+
+.btn{
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    color: #fafafa
+}
+
+
+.container{
+    #mainContent{
+        background-color:rgb(77, 77, 87);
+    }
+
+    .leftContainer{
+        background-color:rgb(38, 134, 126);
+        //background-color:darken(@red, 10%);
+        .round-borders
+    }
+
+    .middleContainer{
+        background-color:rgb(38, 134, 126);
+        .round-borders
+    }
+
+    .rightContainer{
+        background-color:rgb(38, 134, 126);
+        .round-borders
+    }
+
+    .news{
+        padding:10px;
+    }
+
+    .secondaryContent{
+        background-color: rgba(38, 134, 126, 0.404);
+        color:#fff;
+
+    }
+
+    .secondaryContent{
+        p{
+            padding:5px;
+        }
+
+        a.myLink{
+            color:blue;
+            &:hover{
+                color:purple;
+                font-weight:bold;
+            }
+
+        }
+    }
+
+}
+

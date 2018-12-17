@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="mustache.js"></script>
+    <title>Coach Zumsteg's Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <style>
+            body {
+                background: rgb(51,51,51);
+                font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+                color: white;
+            }
+
+            #background1{
+                background-color: rgb(51,51,51);
+            }
+
+            #background2{
+                background-color: rgba(117, 140, 150, 0.87);
+            }
+
+            #background3{
+                background-color: rgb(193,206,215)
+            }
+    
+            h1 {
+                font: Arial;
+                font-size: 72px;
+                text-transform: uppercase;
+            }
+    
+            h2 {
+                font: Arial;
+                font-size: 36px;
+                text-transform: uppercase;
+            }
+    
+            h3 {
+                font: Arial;
+                font-size: 24px;
+                text-transform: uppercase;
+            }
+            
+            h4 {
+                font: Arial;
+                font-size: 18px;
+                text-transform: uppercase;
+            }
+
+            button {
+                background-color: rgb(193,206,215);
+                border-radius: 0px;
+                padding: 10px;
+                font: Arial;
+                color: rgb(77, 77, 87);
+            }
+    
+            .inputLabel {
+                font-size: 14px;
+                font-weight: bold;
+            }
+    
+            input.inputField {
+                padding: 5px;
+                border: 1px solid rgb(38, 134, 126);
+            }
+    
+            div.box {
+                height: 100px;
+                width: 100px;
+                display: inline-block;
+                margin: 0 10px 0 10px;
+            }
+    
+            .warning {
+                background-color: yellow;
+                font-weight: bold;
+                color: black;
+                padding: 10px;
+                border-radius: 5px;
+            }
+    
+            .danger {
+                background-color: red;
+                font-weight: bold;
+                color: white;
+                padding: 10px;
+                border-radius: 5px;
+            }
+    
+            .success {
+                background-color: rgb(15, 172, 54);
+                font-weight: bold;
+                color: white;
+                padding: 10px;
+                border-radius: 5px;
+            }
+    
+            svg.svg-inline--fa {
+                color: white;
+            }
+    
+            .spacer {
+                margin-top: 25px;
+                margin-left: 25px;
+                margin-right: 25px;
+            }
+    
+            #footer {
+                border-top: 1px solid #dddddd;
+                margin-top: 50px;
+                padding: 10px;
+                text-align: center;
+            }
+
+            ul {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    overflow: hidden;
+                    background-color: white;
+                }
+                
+                li {
+                    float: left;
+                }
+                
+                li a {
+                    display: block;
+                    color: rgb(38, 134, 126));
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                }
+                
+                li a:hover {
+                    background-color: rgb(38, 134, 126);
+                }
+
+            img.round{
+                border-radius: 50%;
+                width: 300px;
+                height: 300px;
+                margin-top: 40px;
+                margin-bottom: 40px;
+                filter: brightness(50%);
+            }
+
+            .spacer2{
+                margin-top:25px;
+                margin-bottom: 25px;
+            }
+
+            .spacer3{
+                margin-top:120px;
+                margin-bottom:120px;
+            }
+
+            .centered {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 20px;
+                text-transform: uppercase;
+            }
+    </style>
+</head>
+
+<body>
+    
+   
+    <div class="container">
+        <h3 align="left" background-color=rgb(117,140,163)><a href="homepage.html"><font color=white>Learning with Coach Zumsteg</font></a></h3>
+        <p align="right">tim.zumsteg@washington.k12.mo.us (636) 231-2200</p>
+            <ul>
+                <li><a href="homepage.html"><font color=rgb(51,51,51)>Home</font></a></li>
+                <li><a href="DiscreteHomepage.html"><font color=rgb(51,51,51)>Discrete Mathematics</font></a></li>
+                <li><a href="GeometryHomepage.html"><font color=rgb(51,51,51)>Geometry</font></a></li>
+                <li><a href="PreAlgebraHomepage.html"><font color=rgb(51,51,51)>Pre-Algebra</font></a></li>
+                <li><a href="https://www.gatewayathletic.org/public/genie/766/school/15/"><font color=rgb(51,51,51)>Athletics</font></a></li>
+                <li><a href="contact.html"><font color=rgb(51,51,51)>Contact Coach Zumsteg</font></a></li>
+            </ul>  
+        
+        <h1 align="center">Learning with Coach Zumsteg</h1>
+        <p align="center">Mathematics Teacher at Washington High School in Washington, Missouri</p>
+        <img align="center" src="coverphoto.png" role = "image" width="1145" height="500" class="spacer2">
+
+        <div class="row">
+            <div align="center" font= arial font-size= 18px class="col-sm-2 col-md-3 col-lg-4" background-color=rgb(117,140,163)>
+                <h2 class="spacer3">About Coach Zumsteg</h2>
+                <p align="left">
+                    Hello! I'm Tim Zumsteg and I'm a teacher at Washington High School in Washington, Missouri. I currently teach Dicrete Mathematics, Geometry, and Pre-Algebra. I also coach JV Baseball and Softball at Washington High. 
+                    I was born and raised in Washington, Missouri and went to Washington High School where I graduated in 2011. After High school I attended East Central College in Union, Missouri where I used my A+ money to complete my General
+                    Eduacation classes. I then transferred to the University of Central Missouri in 2013. I student taught at Holt High School in Wentzville, Missouri. I went on to graduate from UCM with a BSE in Mathematics in 2016. Just before Graduation, 
+                    I accepted my first teaching job with the School District of Washington. I am currently working on my Master's Degree in Software Management through Maryville University in St. Louis, Missouri. I will have my degree in 2019.
+                </p>
+            </div>
+            <div align="center" class="col-sm-10 col-md-9 col-lg-8">
+                <img src="weddinggravelroad.jpg" role = "image" alt="photo of zumsteg" width="755" height="550" class="spacer3">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div align="center" font=arial font-size = 18px class="col-lg-12">
+                <h2 class="spacer3">Classes I Teach</h2>
+                <img align="center" src="discretepic.png" role = "image" width = "1100" height = "475" class="spacer3">
+            </div>
+        </div>
+
+        <div class="row">
+            <div align="center" font=arial font-size=26px class = "col-sm-2 col-md-3 col-lg-4">
+                <h3>Discrete Mathematics</h3>
+                <p align="center" font-size=26px>1 Semester (Fall or Spring)</p>
+            </div>
+            <div align="left" font=arial font-size=22px class = "col-sm-10 col-md-9 col-lg-8">
+                <p font-size=22px >
+                    This course is intended for students who are interested in, but not limited to degrees in computer science and the social sciences.
+                    The content will focus on contemporary topics in mathematics including number theory, voting methods, cryptology, networking, logic, 
+                    number systems, optimization, cyber security, statistics and probability</p>
+                    
+                <button onclick="location.href='DiscreteHomepage.html'" type="button" align="right" class="spacer2">
+                    See Materials and Information
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+                <div align="center" font=arial font-size = 18px class="col-lg-12" class="spacer3">
+                    <img align="center" src="geopic.png" role = "image" width = "1100" height = "475" class="spacer3">
+                </div>
+            </div>
+
+        <div class="row">
+                <div align="center" font=arial font-size=26px class = "col-sm-2 col-md-3 col-lg-4">
+                    <h3>Geometry</h3>
+                    <p align="center" font-size=26px>Year-Long Course</p>
+                </div>
+                <div align="left" font=arial font-size=22px class = "col-sm-10 col-md-9 col-lg-8">
+                    <p font-size=22px >
+                        This course is a study of plane Euclidean geometry including proofs. The student will use deductive reasoning and logic to draw 
+                        conclusions when given certain facts. A study of geometric shapes and figures, congruence and similarity, area, volume, constructions, 
+                        plane and three-dimensional figures and their theorems, postulates and definitions are included</p>
+                    
+                    <button onclick="location.href='GeometryHomepage.html'" type="button" align="center" class="spacer2">
+                        See Materials and Information
+                    </button>
+                </div>
+                
+            
+            </div>
+
+            <div class="row">
+                    <div align="center" font=arial font-size = 18px class="col-lg-12" class="spacer3">
+                        <img align="center" src="prealpic.png" role = "image" width = "1100" height = "475" class="spacer3">
+                    </div>
+                </div>
+    
+            <div class="row">
+                    <div align="center" font=arial font-size=26px class = "col-sm-2 col-md-3 col-lg-4">
+                        <h3>Pre-Algebra</h3>
+                        <p align="center" font-size=26px>Year-Long Course</p>
+                    </div>
+                    <div align="left" font=arial font-size=22px class = "col-sm-10 col-md-9 col-lg-8">
+                        <p font-size=22px >
+                                This course is designed for students not yet ready for Algebra and will focus on developing students’ 
+                                understanding of mathematics. Topics covered will include operations on rational numbers, simplifying 
+                                algebraic expressions, manipulating formulas, solving linear equations and inequalities, graphing linear 
+                                equations and inequalities, proportions, problem solving, and elementary statistics and probability. 
+                                It is recommended that students successfully completing PreAlgebra continue with Algebra I Concepts</p>
+                        
+                        <button onclick="location.href='PreAlgebraHomepage.html'" type="button" align="center" class="spacer2">
+                            See Materials and Information
+                        </button>
+                    </div>
+                    
+            </div>
+
+            <div class="row">
+                    <div align="center" font=arial font-size = 18px class="col-lg-12">
+                        <h2 class="spacer3">Athletics</h2>
+                    </div>
+                </div>
+            
+            <div class = "row">
+                <div align="left" font=arial font-size=26px class = "col-sm-4 col-md-4 col-lg-4" class="spacer3">
+                    <img onclick="location.href='https://www.gatewayathletic.org/g5-bin/client.cgi?cwellOnly=1&G5statusflag=view&schoolname=&school_id=15&G5button=13&G5genie=766&vw_schoolyear=1&vw_agl=16-1-10,16-1-12,16-1-13,16-1-11,'" align = "left" src="baseball.png" class = round>
+                    <div class="centered">Baseball Schedule</div>
+                </div>
+                <div align="center" font=arial font-size=26px class = "col-sm-4 col-md-4 col-lg-4" class="spacer3">
+                    <img onclick="location.href='https://www.gatewayathletic.org/public/genie/766/school/15/'" align = "center" src="athletics.jpg" class = round>
+                    <div class="centered">Activities/Athletics</div>
+                </div>
+                <div onclick="location.href='https://www.gatewayathletic.org/g5-bin/client.cgi?cwellOnly=1&G5statusflag=view&schoolname=&school_id=15&G5button=13&G5genie=766&vw_schoolyear=1&vw_agl=19-1-12,19-1-13,19-1-11,''" align="right" font=arial font-size=26px class = "col-sm-4 col-md-4 col-lg-4" class="spacer3">
+                    <img  align = "right" src="softball.png" class = round>
+                    <div class="centered">Softball Schedule</div>
+                </div>
+            </div>
+    </div>
+    
+</body>
+
+</html>
